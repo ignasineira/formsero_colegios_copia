@@ -238,7 +238,7 @@
                                    <div style="width: 30%; padding-left: 10px">
                                         <div class="form-check form-check-inline">
                                             <label class="form-check-label">
-                                                <input class="form-check-input" id="dosi_unica" type="radio" name="dosis" value="unica" disabled> Dosis única
+                                                <input class="form-check-input" id="dosis" type="radio" name="dosis" value="unica" disabled> Dosis única
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
@@ -527,7 +527,7 @@
                 
                 if(d3.select("#marcaVacuna").value=='Sinovac'){
                     
-                    d3.select("#dosis_unica").removeAttribute("disabled");
+                    d3.select("#dosis").removeAttribute("disabled");
                 }
             }
 
