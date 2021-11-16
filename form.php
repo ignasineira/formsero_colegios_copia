@@ -524,7 +524,7 @@
             }
 
             function dosis(vacuna){
-                console.log(hola)
+                console.log("hola")
                 if(d3.select("#marcaVacuna").value=='Sinovac'){
                     
                     d3.select("#dosis_unica").removeAttribute("disabled");
