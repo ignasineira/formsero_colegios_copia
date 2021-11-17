@@ -226,7 +226,7 @@
                             <div class="col-md-8">
                                 <div id="ddosis" style="display: none">
                                     <div style="width: 30%">
-                                        <select class="form-select" id="marcaVacuna" onchange="dosis(true)" name="marcaVacuna">
+                                        <select class="form-select" id="marcaVacuna" onchange="dosis(this)" name="marcaVacuna">
                                             <option disabled selected value="">Seleccione una marca</option>
                                             <option value="Sinovac"  >Sinovac</option>
                                             <option value="Pfizer">Pfizer</option>
@@ -238,7 +238,7 @@
                                    <div style="width: 30%; padding-left: 10px">
                                         <div class="form-check form-check-inline">
                                             <label class="form-check-label">
-                                                <input class="form-check-input" id="dosis" type="radio" name="dosis" value="unica" disabled> Dosis única
+                                                <input class="form-check-input" id="dosis_unica" type="radio" name="dosis" value="unica" > Dosis única
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
@@ -523,12 +523,16 @@
                 }
             }
 
-            function dosis(vacuna){
+            function dosis(sender){
                 
-                if(d3.select("#marcaVacuna").value=='Sinovac'){
+                if(sender=='Sinovac'){
                     
-                    d3.select("#dosis").removeAttribute("disabled");
+                    d3.select("#dosis_unica").property("disabled",false);
                 }
+                else{
+                     d3.select("#dosis_unica").property("disabled",true);
+                }
+
             }
 
             
