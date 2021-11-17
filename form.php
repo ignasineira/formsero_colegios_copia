@@ -507,7 +507,7 @@
                     d3.select("#comn").property("checked",false);
                 }
             }
-            function vacuna(vacuna){
+            function vacuna(vacuna) {
                 if (vacuna){
                     d3.select("#ddosis").style("display","flex");
                     d3.select("#dosis").attr("required", true);
@@ -523,14 +523,9 @@
                 }
             }
 
-            function dosis(sender){
-                
+            function dosis(sender) {
                 if(sender=='Sinovac'){
-                    
-                    d3.select("#dosis_unica").property("disabled",false);
-                }
-                else{
-                     d3.select("#dosis_unica").property("disabled",true);
+                    d3.select("#dosis_unica").style("display","none");
                 }
 
             }
