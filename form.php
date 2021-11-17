@@ -549,7 +549,7 @@
                 } 
 
                 else if(dosis.value=='CanSino'){
-                    
+                    d3.select("#dosis_unica").property('disabled','false');
                     d3.select("#dosis_primera").property('disabled',true);
                     d3.select("#dosis_primera").property("checked",false);
                     d3.select("#dosis_segunda").property('disabled',true);
@@ -557,6 +557,8 @@
                 } 
                 else {
                     d3.select("#dosis_unica").property('disabled',false);
+                    d3.select("#dosis_primera").property('disabled',false);
+                    d3.select("#dosis_segunda").property('disabled',false);
                     d3.select("#dosis_unica").property("checked",false)
                 }
 
