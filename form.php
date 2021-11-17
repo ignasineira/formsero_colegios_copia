@@ -533,14 +533,17 @@
                 if(dosis.value=='Pfizer'){
                     
                     d3.select("#dosis_unica").property('disabled',true);
+                    d3.select("#dosis_unica").property("checked",false);
                 } 
 
-                else if(dosis.value=='Otra'){
+                else if(dosis.value=='Pfizer'){
                     
-                    d3.select("#dosis_unica").disabled=true;
+                    d3.select("#dosis_unica").property('disabled',true);
+                    d3.select("#dosis_unica").property("checked",false);
                 } 
                 else {
                     d3.select("#dosis_unica").property('disabled',false);
+                    d3.select("#dosis_unica").property("checked",false)
                 }
 
 
