@@ -238,7 +238,7 @@
                                    <div style="width: 30%; padding-left: 10px">
                                         <div class="form-check form-check-inline">
                                             <label class="form-check-label">
-                                                <input class="form-check-input" id="dosis" type="radio" name="dosis" value="unica" disabled="disabled"> Dosis única
+                                                <input class="form-check-input" id="dosis" type="radio" name="dosis" value="unica"> Dosis única
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
@@ -532,15 +532,15 @@
 
                 if(dosis=='Pfizer'){
                     
-                    d3.select("#dosis_unica").attr('disabled','disabled');
+                    d3.select("#dosis_unica").property('disabled','disabled');
                 } 
 
                 else if(dosis=='Otra'){
                     
-                    d3.select("#dosis_unica").attr('disabled','disabled');
+                    d3.select("#dosis_unica").property('disabled','disabled');
                 } 
                 else {
-                    d3.select("#dosis_unica").attr('disabled',false);
+                    d3.select("#dosis_unica").property('disabled',false);
                 }
 
 
