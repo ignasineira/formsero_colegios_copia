@@ -533,13 +533,14 @@
                 if(dosis=='Pfizer'){
                     
                     d3.select("#dosis_unica").attr('disabled','disabled');
-                }
-                if(dosis=='Sinovac'){
-                    d3.select("#dosis_unica").attr('disabled','disabled');
+                } 
 
-                }
+                if(dosis=='Otra'){
+                    
+                    d3.select("#dosis_unica").attr('disabled','disabled');
+                } 
                 else{
-                    d3.select("#dosis_unica").property("disabled",false);
+                    d3.select("#dosis_unica").attr('disabled',false);
                 }
 
 
@@ -550,7 +551,7 @@
 			function buscarRut(){
 			    let rutin = d3.select('#rut');
                 let value = rutin.property('value');
-                if (baseSenama[value]){
+                if (baseSenama[value])
                     rutin.attr('class','form-control is-valid');
                     d3.select('#nombre').attr('value',baseSenama[value]['nombre']);
                     d3.select('#edad').attr('value',baseSenama[value]['edad']);
