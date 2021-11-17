@@ -534,9 +534,12 @@
                     
                     d3.select("#dosis_unica").attr('disabled','disabled');
                 }
-                else{
+                if(dosis=='Sinovac'){
                     d3.select("#dosis_unica").attr('disabled','disabled');
 
+                }
+                else{
+                    d3.select("#dosis_unica").property("disabled",false);
                 }
 
 
