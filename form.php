@@ -223,12 +223,12 @@
                                     </label>
                                 </div>
                             </div>
-                            <div class="col-md-8">
+                              <div class="col-md-8">
                                 <div id="ddosis" style="display: none">
                                     <div style="width: 30%">
-                                        <select class="form-select" id="marcaVacuna" onchange ="EnableDisable(this)" name="marcaVacuna">
+                                        <select class="form-select" id="marcaVacuna" name="marcaVacuna">
                                             <option disabled selected value="">Seleccione una marca</option>
-                                            <option value="Sinovac"  >Sinovac</option>
+                                            <option value="Sinovac">Sinovac</option>
                                             <option value="Pfizer">Pfizer</option>
                                             <option value="Astra-Zeneca">Astra-Zeneca</option>
                                             <option value="CanSino">CanSino</option>
@@ -238,12 +238,12 @@
                                    <div style="width: 30%; padding-left: 10px">
                                         <div class="form-check form-check-inline">
                                             <label class="form-check-label">
-                                                <input class="form-check-input" id="dosis_unica" type="radio" name="dosis" value="unica" > Dosis única
+                                                <input class="form-check-input" id="dosis" type="radio" name="dosis" value="unica"> Dosis única
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <label class="form-check-label">
-                                                <input class="form-check-input"    type="radio" name="dosis" value="primera"> Primera dosis
+                                                <input class="form-check-input" type="radio" name="dosis" value="primera"> Primera dosis
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
@@ -257,7 +257,7 @@
                                     </div>
                                 </div>
                             </div>
-                
+                    </div>
                     <div class="form-group row" style="margin-bottom: 10px">
                         <label for="mdt1" class="col-md-2 col-form-label ">
                             <div class="labelInput d-inline-block">Medio de transporte al colegio</div>
@@ -421,7 +421,7 @@
                    'COLEGIO ALICANTE DEL VALLE',
                    'LICEO ALTO CORDILLERA DE LA FLORIDA', 'LICEO DE ZAPALLAR',
                    'ESCUELA ESPANA', 'COL.NTRA.SEÑORA DEL HUERTO',
-                   'LICEO BICENTENARIO COLEGIO PASIÓN DE JESÚS DE LIMACHE',
+                   'LICEO BICENTENARIO COLEGIO PASION DE JESUS DE LIMACHE',
                    'ESCUELA BASICA BRASILIA', 'LICEO MATILDE BRANDAU DE ROSS',
                    'ESCUELA JOAQUIN EDWARDS BELLO', 'COLEGIO INTERNACIONAL',
                    'COLEGIO SAN IGNACIO', 'COLEGIO MARIA AUXILIADORA',
@@ -442,8 +442,8 @@
                    'LICEO CLAUDIO FLORES SOTO', 'LICEO GABRIELA MISTRAL',
                    'ESCUELA PARTICULAR TOQUI CAUPOLICAN',
                    'COLEGIO TERESIANO LOS ANGELES', 'COLEGIO CONCEPCION CHIGUAYANTE',
-                   'COLEGIO CREACIÓN CONCEPCIÓN',
-                   'INSTITUTO HUMANIDADES MONSEÑOR JOSE MANUEL SANTO ASCARZA',
+                   'COLEGIO CREACION CONCEPCION',
+                   'INSTITUTO HUMANIDADES MONSENOR JOSE MANUEL SANTO ASCARZA',
                    'COLEGIO NUEVOS HORIZONTES'];
 			for (let i = 0; i < colegios.length; i++) {
 				d3.select('#colegio').append('option').attr('value',colegios[i]).text(colegios[i]);
@@ -507,7 +507,7 @@
                     d3.select("#comn").property("checked",false);
                 }
             }
-            function vacuna(vacuna) {
+            function vacuna(vacuna){
                 if (vacuna){
                     d3.select("#ddosis").style("display","flex");
                     d3.select("#dosis").attr("required", true);
@@ -523,35 +523,10 @@
                 }
             }
 
-            function EnableDisable(dosis) {
-                //var input = d3.select("#marcaVacuna"); //Let
-                //var button = d3.select("#dosis_unica");
-
-                //button.disabled = true; //setting button state to disabled
-
-
-                if(dosis=='Pfizer'){
-                    
-                    d3.select("#dosis_unica").attr('disabled','disabled');
-                } 
-
-                if(dosis=='Otra'){
-                    
-                    d3.select("#dosis_unica").attr('disabled','disabled');
-                } 
-                else{
-                    d3.select("#dosis_unica").attr('disabled',false);
-                }
-
-
-            }
-
-            
-
 			function buscarRut(){
 			    let rutin = d3.select('#rut');
                 let value = rutin.property('value');
-                if (baseSenama[value])
+                if (baseSenama[value]){
                     rutin.attr('class','form-control is-valid');
                     d3.select('#nombre').attr('value',baseSenama[value]['nombre']);
                     d3.select('#edad').attr('value',baseSenama[value]['edad']);
