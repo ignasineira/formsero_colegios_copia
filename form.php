@@ -524,8 +524,8 @@
             }
 
             function stateHandle() {
-                let input = d3.select("#marcaVacuna");
-                let button = d3.select("#dosis_unica");
+                var input = d3.select("#marcaVacuna"); //Let
+                var button = d3.select("#dosis_unica");
 
                 //button.disabled = true; //setting button state to disabled
 
