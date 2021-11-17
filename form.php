@@ -243,12 +243,12 @@
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <label class="form-check-label">
-                                                <input class="form-check-input" type="radio" name="dosis" value="primera"> Primera dosis
+                                                <input class="form-check-input"  id="dosis_primera" type="radio" name="dosis" value="primera"> Primera dosis
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <label class="form-check-label">
-                                                <input class="form-check-input" type="radio" name="dosis" value="segunda"> Segunda dosis
+                                                <input class="form-check-input"  id="dosis_segunda" type="radio" name="dosis" value="segunda"> Segunda dosis
                                             </label>
                                         </div>
                                     </div>
@@ -536,10 +536,24 @@
                     d3.select("#dosis_unica").property("checked",false);
                 } 
 
-                else if(dosis.value=='Pfizer'){
+                else if(dosis.value=='Sinovac'){
                     
                     d3.select("#dosis_unica").property('disabled',true);
                     d3.select("#dosis_unica").property("checked",false);
+                } 
+
+                else if(dosis.value=='Astra-Zeneca'){
+                    
+                    d3.select("#dosis_unica").property('disabled',true);
+                    d3.select("#dosis_unica").property("checked",false);
+                } 
+
+                else if(dosis.value=='CanSino'){
+                    
+                    d3.select("#dosis_primera").property('disabled',true);
+                    d3.select("#dosis_primera").property("checked",false);
+                    d3.select("#dosis_segunda").property('disabled',true);
+                    d3.select("#dosis_segunda").property("checked",false);
                 } 
                 else {
                     d3.select("#dosis_unica").property('disabled',false);
