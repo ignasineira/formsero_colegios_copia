@@ -530,7 +530,7 @@
                 //button.disabled = true; //setting button state to disabled
 
 
-                if(input.value=='Sinovac'){
+                if(input.value!=''){
                     
                     button.disabled = true;
                 } 
