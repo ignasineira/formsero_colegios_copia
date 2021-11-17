@@ -226,7 +226,7 @@
                             <div class="col-md-8">
                                 <div id="ddosis" style="display: none">
                                     <div style="width: 30%">
-                                        <select class="form-select" id="marcaVacuna" onchange="stateHandle()" name="marcaVacuna">
+                                        <select class="form-select" id="marcaVacuna" oninput="EnableDisable(this)" name="marcaVacuna">
                                             <option disabled selected value="">Seleccione una marca</option>
                                             <option value="Sinovac"  >Sinovac</option>
                                             <option value="Pfizer">Pfizer</option>
@@ -523,20 +523,18 @@
                 }
             }
 
-            function stateHandle() {
-                var input = d3.select("#marcaVacuna"); //Let
-                var button = d3.select("#dosis_unica");
+            function EnableDisable(dosis) {
+                //var input = d3.select("#marcaVacuna"); //Let
+                //var button = d3.select("#dosis_unica");
 
                 //button.disabled = true; //setting button state to disabled
 
 
-                if(input.value!=''){
+                if(dosis=='Pfizer'){
                     
-                    button.disabled = true;
+                    d3.select("#dosis_unica").attr('disabled','disabled');
                 } 
-                else {
-                    button.disabled = false;
-                }
+
 
             }
 
