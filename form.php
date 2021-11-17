@@ -226,7 +226,7 @@
                               <div class="col-md-8">
                                 <div id="ddosis" style="display: none">
                                     <div style="width: 30%">
-                                        <select class="form-select" id="marcaVacuna" name="marcaVacuna">
+                                        <select class="form-select" id="marcaVacuna" name="marcaVacuna" onchange="EnableDisable(this)">
                                             <option disabled selected value="">Seleccione una marca</option>
                                             <option value="Sinovac">Sinovac</option>
                                             <option value="Pfizer">Pfizer</option>
@@ -522,6 +522,30 @@
                     d3.select("#dateVac").attr("required", null);
                 }
             }
+
+            function EnableDisable(dosis) {
+                //var input = d3.select("#marcaVacuna"); //Let
+                //var button = d3.select("#dosis_unica");
+
+                //button.disabled = true; //setting button state to disabled
+
+
+                if(dosis=='Pfizer'){
+                    
+                    d3.select("#dosis_unica").attr('disabled','disabled');
+                } 
+
+                else if(dosis=='Otra'){
+                    
+                    d3.select("#dosis_unica").attr('disabled','disabled');
+                } 
+                else {
+                    d3.select("#dosis_unica").attr('disabled',false);
+                }
+
+
+            }
+
 
 			function buscarRut(){
 			    let rutin = d3.select('#rut');
