@@ -226,7 +226,7 @@
                             <div class="col-md-8">
                                 <div id="ddosis" style="display: none">
                                     <div style="width: 30%">
-                                        <select class="form-select" id="marcaVacuna" oninput="EnableDisable(this)" name="marcaVacuna">
+                                        <select class="form-select" id="marcaVacuna" onchange ="EnableDisable(this)" name="marcaVacuna">
                                             <option disabled selected value="">Seleccione una marca</option>
                                             <option value="Sinovac"  >Sinovac</option>
                                             <option value="Pfizer">Pfizer</option>
