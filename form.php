@@ -238,7 +238,7 @@
                                    <div style="width: 30%; padding-left: 10px">
                                         <div class="form-check form-check-inline">
                                             <label class="form-check-label">
-                                                <input class="form-check-input" id="dosis_unica" type="radio" name="dosis" value="unica" > Dosis única
+                                                <input class="form-check-input" id="dosis_unica" type="radio" name="dosis" value="unica" disabled = true> Dosis única
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
@@ -523,9 +523,19 @@
                 }
             }
 
-            function dosis(sender) {
-                if(sender=='Sinovac'){
-                    d3.select("#dosis_unica").style("display","none");
+            function stateHandle() {
+                let input = d3.select("#marcaVacuna");
+                let button = d3.select("#dosis_unica");
+
+                button.disabled = true; //setting button state to disabled
+
+
+                if(input.value=='Sinovac'){
+                    
+                    button.disabled = true;
+                } 
+                else {
+                    button.disabled = false;
                 }
 
             }
