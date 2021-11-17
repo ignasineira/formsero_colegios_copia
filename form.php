@@ -530,12 +530,12 @@
                 //button.disabled = true; //setting button state to disabled
 
 
-                if(dosis=='Pfizer'){
+                if(dosis.value=='Pfizer'){
                     
                     d3.select("#dosis_unica").property('disabled',true);
                 } 
 
-                else if(dosis=='Otra'){
+                else if(dosis.value=='Otra'){
                     
                     d3.select("#dosis_unica").disabled=true;
                 } 
