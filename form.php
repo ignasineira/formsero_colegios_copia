@@ -533,7 +533,11 @@
                 if(dosis=='Pfizer'){
                     
                     d3.select("#dosis_unica").attr('disabled','disabled');
-                } 
+                }
+                else{
+                    d3.select("#dosis_unica").attr('disabled','disabled');
+
+                }
 
 
             }
