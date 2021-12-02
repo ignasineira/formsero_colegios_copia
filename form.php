@@ -238,7 +238,7 @@
                                    <div style="width: 30%; padding-left: 10px">
                                         <div class="form-check form-check-inline">
                                             <label class="form-check-label">
-                                                <input class="form-check-input" id="dosis_unica" type="radio" name="dosis" value="unica" disabled="true"> Dosis única
+                                                <input class="form-check-input" id="dosis_unica" type="radio" name="dosis" value="unica" disabled="true" required="true"> Dosis única
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
