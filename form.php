@@ -253,7 +253,7 @@
                                         </div>
                                     </div>
                                     <div style="width: 30%">
-                                        <input class="form-control" type="date" name="dateVac" id="dateVac" value='today' min="2021-08-01" max="2021-08-31">
+                                        <input class="form-control" type="date" name="dateVac" id="dateVac" value='today' max="2021-08-31">
                                     </div>
                                 </div>
                             </div>
