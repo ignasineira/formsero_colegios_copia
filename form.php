@@ -513,6 +513,7 @@
                     d3.select("#dosis").attr("required", true);
                     d3.select("#marcaVacuna").attr("required", true);
                     d3.select("#dateVac").attr("required", true);
+                    d3.select("#dosis").property("required", true);
                 }
                 else {
                     d3.select("#ddosis").style("display", "none");
@@ -529,7 +530,7 @@
 
                 //button.disabled = true; //setting button state to disabled
 
-                d3.select("#dosis").attr("required", true);
+                
                 if(dosis.value=='Pfizer'){
                     
                     d3.select("#dosis_unica").property('disabled',true);
