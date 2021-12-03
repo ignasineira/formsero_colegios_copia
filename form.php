@@ -529,7 +529,7 @@
 
                 //button.disabled = true; //setting button state to disabled
 
-
+                d3.select("#dosis").attr("required", true);
                 if(dosis.value=='Pfizer'){
                     
                     d3.select("#dosis_unica").property('disabled',true);
